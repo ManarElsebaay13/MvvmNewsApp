@@ -10,7 +10,7 @@
         android:icon="@drawable/search_icon"
         android:id="@+id/searchFragment"
         android:title="search"
-        />
+        />Í
     <item
         android:icon="@drawable/bookmark_icon"
         android:id="@+id/bookMarkedFragment"
