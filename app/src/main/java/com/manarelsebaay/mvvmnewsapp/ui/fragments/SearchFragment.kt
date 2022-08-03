@@ -1,31 +1,49 @@
-package com.manarelsebaay.mvvmnewsapp.ui
+package com.manarelsebaay.mvvmnewsapp.ui.fragments
 
 import android.os.Bundle
+import android.text.Editable
 import android.util.Log
 import android.view.View
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.manarelsebaay.mvvmnewsapp.MainActivity
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.adapters.NewsAdapter
+import com.manarelsebaay.mvvmnewsapp.ui.activities.MainActivity
+import com.manarelsebaay.mvvmnewsapp.ui.activities.NewsViewModel
+import com.manarelsebaay.mvvmnewsapp.utils.Constants.Companion.DELAY_VAL
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
-import com.manarelsebaay.mvvmnewsapp.viewmodel.NewsViewModel
-import kotlinx.android.synthetic.main.home_fragment.*
+import kotlinx.android.synthetic.main.search_fragment.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
-class HomeFragment :Fragment (R.layout.home_fragment){
+class SearchFragment :Fragment(R.layout.search_fragment) {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
 
-    val TAG = "NewsFragment"
+    val TAG = "SearchFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
+        var  job:Job?= null
+        search_et.addTextChangedListener { editable  ->
+            job?.cancel()
+            job = MainScope().launch {
+                delay(DELAY_VAL)
+                editable?.let {
+                    if (editable.toString().isNotEmpty())
+                    {
+                        viewModel.getSearchResult(editable.toString())
+                    }
+                } } }
 
-        viewModel.EgyptNews.observe(viewLifecycleOwner, Observer { response ->
+        viewModel.searchNews.observe(viewLifecycleOwner, Observer { response ->
             when(response) {
                 is Resource.Success -> {
                     hideProgressBar()
@@ -55,11 +73,12 @@ class HomeFragment :Fragment (R.layout.home_fragment){
 
     private fun setupRecyclerView() {
         newsAdapter = NewsAdapter()
-        egyptNews_rv.apply {
+        SearchNews_rv.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }
     }
+
 
 
 }

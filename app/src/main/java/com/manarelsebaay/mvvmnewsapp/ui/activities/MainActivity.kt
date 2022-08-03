@@ -1,15 +1,13 @@
-package com.manarelsebaay.mvvmnewsapp
+package com.manarelsebaay.mvvmnewsapp.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.db.NewsDatabase
 import com.manarelsebaay.mvvmnewsapp.repository.NewsRepository
-import com.manarelsebaay.mvvmnewsapp.viewmodel.NewsViewModel
-import com.manarelsebaay.mvvmnewsapp.viewmodel.viewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 
 

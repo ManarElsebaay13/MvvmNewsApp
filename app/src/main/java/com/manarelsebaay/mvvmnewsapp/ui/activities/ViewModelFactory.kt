@@ -1,8 +1,7 @@
-package com.manarelsebaay.mvvmnewsapp.viewmodel
+package com.manarelsebaay.mvvmnewsapp.ui.activities
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewmodel.CreationExtras
 import com.manarelsebaay.mvvmnewsapp.repository.NewsRepository
 
 class viewModelFactory(

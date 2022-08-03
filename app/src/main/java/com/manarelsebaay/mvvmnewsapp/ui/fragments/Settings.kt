@@ -1,4 +1,4 @@
-package com.manarelsebaay.mvvmnewsapp.ui
+package com.manarelsebaay.mvvmnewsapp.ui.fragments
 
 import androidx.fragment.app.Fragment
 import com.manarelsebaay.mvvmnewsapp.R
