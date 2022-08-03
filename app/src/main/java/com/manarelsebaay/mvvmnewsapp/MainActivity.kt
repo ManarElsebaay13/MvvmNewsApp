@@ -1,18 +1,33 @@
 package com.manarelsebaay.mvvmnewsapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.manarelsebaay.mvvmnewsapp.db.NewsDatabase
+import com.manarelsebaay.mvvmnewsapp.repository.NewsRepository
+import com.manarelsebaay.mvvmnewsapp.viewmodel.NewsViewModel
+import com.manarelsebaay.mvvmnewsapp.viewmodel.viewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
+
+     lateinit var viewModel: NewsViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        bottomNavigationView.setupWithNavController(nav_graph_host.findNavController())
+
+        val newsRepository = NewsRepository(NewsDatabase(this))
+        val viewModelProviderFactory = viewModelFactory(newsRepository)
+        viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
+
+        val navHostFragment= supportFragmentManager.findFragmentById(R.id.nav_graph_host) as NavHostFragment
+        val navController= navHostFragment.navController
+        bottomNavigationView.setupWithNavController(navController)
     }
 }
 
-//mmmmm
