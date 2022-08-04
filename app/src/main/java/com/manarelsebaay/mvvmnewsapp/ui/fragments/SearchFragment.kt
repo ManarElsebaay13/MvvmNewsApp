@@ -7,6 +7,7 @@ import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.adapters.NewsAdapter
@@ -30,8 +31,18 @@ class SearchFragment :Fragment(R.layout.search_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
+
         setupRecyclerView()
-        var  job:Job?= null
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply{
+                putSerializable("article",it)
+            }
+            findNavController().navigate(
+                R.id.action_searchFragment_to_detailsFragment,
+                bundle
+            )}
+
+            var  job:Job?= null
         search_et.addTextChangedListener { editable  ->
             job?.cancel()
             job = MainScope().launch {

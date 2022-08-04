@@ -8,9 +8,10 @@
 
     <ImageView
         android:id="@+id/Article_iv"
-        android:layout_width="160dp"
-        android:layout_height="90dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
+        android:background="@drawable/rounded_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,17 +20,18 @@
         android:id="@+id/title_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ellipsize="end"
         android:maxLines="3"
         android:text="TITLE"
+        android:layout_margin="10dp"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textDirection="anyRtl"
         app:layout_constraintLeft_toRightOf="@+id/Article_iv"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/time_tv"
@@ -40,6 +42,8 @@
         android:ellipsize="end"
         android:maxLines="5"
         android:text="time"
+        android:layout_margin="10dp"
+        android:textDirection="anyRtl"
         android:textColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Article_iv"

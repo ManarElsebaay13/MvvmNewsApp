@@ -1,7 +1,10 @@
 package com.manarelsebaay.mvvmnewsapp.ui.activities
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -26,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment= supportFragmentManager.findFragmentById(R.id.nav_graph_host) as NavHostFragment
         val navController= navHostFragment.navController
         bottomNavigationView.setupWithNavController(navController)
+
+
     }
 }
 

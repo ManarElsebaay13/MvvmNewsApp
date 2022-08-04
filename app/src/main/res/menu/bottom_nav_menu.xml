@@ -20,6 +20,7 @@
         android:icon="@drawable/settings_icon"
         android:id="@+id/settings"
         android:title="settings"
+
         />
 
 
