@@ -5,13 +5,16 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.manarelsebaay.mvvmnewsapp.ui.activities.MainActivity
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.adapters.NewsAdapter
+import com.manarelsebaay.mvvmnewsapp.model.Article
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
 import com.manarelsebaay.mvvmnewsapp.ui.activities.NewsViewModel
+import com.manarelsebaay.mvvmnewsapp.ui.fragments.DetailsFragment.Companion.ARTICLE
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment :Fragment (R.layout.home_fragment){
@@ -27,14 +30,9 @@ class HomeFragment :Fragment (R.layout.home_fragment){
         setupRecyclerView()
 
         newsAdapter.setOnItemClickListener {
-            val bundle = Bundle().apply{
-                putSerializable("article",it)
-        }
-        findNavController().navigate(
-            R.id.action_homeFragment_to_detailsFragment,
-            bundle
-        )
-
+//            val bundle = Bundle().apply{ putSerializable("article",it) }
+            ARTICLE=it
+            findNavController().navigate(R.id.action_homeFragment_to_detailsFragment)
         }
 
 

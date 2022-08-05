@@ -60,7 +60,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
             setOnClickListener {
                 onItemClickListener?.let {
                     it(article)
-
                 } } }
 
     }

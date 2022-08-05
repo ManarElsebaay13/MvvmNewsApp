@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/SearchNews_rv"
+        android:id="@+id/bookmarked_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingBottom="50dp"

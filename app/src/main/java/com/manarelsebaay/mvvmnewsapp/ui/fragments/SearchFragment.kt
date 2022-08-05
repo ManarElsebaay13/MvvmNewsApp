@@ -1,7 +1,6 @@
 package com.manarelsebaay.mvvmnewsapp.ui.fragments
 
 import android.os.Bundle
-import android.text.Editable
 import android.util.Log
 import android.view.View
 import androidx.core.widget.addTextChangedListener
@@ -13,6 +12,7 @@ import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.adapters.NewsAdapter
 import com.manarelsebaay.mvvmnewsapp.ui.activities.MainActivity
 import com.manarelsebaay.mvvmnewsapp.ui.activities.NewsViewModel
+import com.manarelsebaay.mvvmnewsapp.ui.fragments.DetailsFragment.Companion.ARTICLE
 import com.manarelsebaay.mvvmnewsapp.utils.Constants.Companion.DELAY_VAL
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
 import kotlinx.android.synthetic.main.search_fragment.*
@@ -34,13 +34,11 @@ class SearchFragment :Fragment(R.layout.search_fragment) {
 
         setupRecyclerView()
         newsAdapter.setOnItemClickListener {
-            val bundle = Bundle().apply{
-                putSerializable("article",it)
-            }
-            findNavController().navigate(
-                R.id.action_searchFragment_to_detailsFragment,
-                bundle
-            )}
+//            val bundle = Bundle().apply{ putSerializable("article",it) }
+                ARTICLE =it
+            findNavController().navigate(R.id.action_searchFragment_to_detailsFragment)
+
+        }
 
             var  job:Job?= null
         search_et.addTextChangedListener { editable  ->
@@ -84,7 +82,7 @@ class SearchFragment :Fragment(R.layout.search_fragment) {
 
     private fun setupRecyclerView() {
         newsAdapter = NewsAdapter()
-        SearchNews_rv.apply {
+        bookmarked_rv.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }

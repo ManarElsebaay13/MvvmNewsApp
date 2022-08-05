@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Query
+import com.manarelsebaay.mvvmnewsapp.model.Article
 import com.manarelsebaay.mvvmnewsapp.model.NewsResponse
 import com.manarelsebaay.mvvmnewsapp.repository.NewsRepository
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
@@ -50,6 +51,13 @@ class NewsViewModel (
         }
         return Resource.Error(response.message())
     }
+
+    fun saveArticle (article: Article)=viewModelScope.launch { newsRepository.insert(article) }
+    fun deletArticle (article: Article)=viewModelScope.launch { newsRepository.delete(article) }
+    fun getArticles() = newsRepository.getAllArticles()
+
+
+
 
 
 }
