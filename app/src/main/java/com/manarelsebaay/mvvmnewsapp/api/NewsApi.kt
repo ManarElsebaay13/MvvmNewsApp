@@ -13,6 +13,8 @@ interface NewsApi {
     suspend fun getEgyptnews (
         @Query("country")
         country:String ="eg",
+        @Query("page")
+        pageNumber: Int = 1,
        @Query("apiKey")
        apikey:String= API_KEY ):Response<NewsResponse>
 

@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -56,7 +55,7 @@ class BookMarkedFragment : Fragment (R.layout.bookmarked_fragment) {
             } }
 
         ItemTouchHelper(itemTouchHelperCallback).apply {
-            attachToRecyclerView(bookmarked_rv)
+            attachToRecyclerView(search_rv)
         }
 
         viewModel.getArticles().observe(viewLifecycleOwner,Observer{
@@ -76,7 +75,7 @@ class BookMarkedFragment : Fragment (R.layout.bookmarked_fragment) {
 
     private fun setupRecyclerView() {
         newsAdapter = NewsAdapter()
-        bookmarked_rv.apply {
+        search_rv.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }
