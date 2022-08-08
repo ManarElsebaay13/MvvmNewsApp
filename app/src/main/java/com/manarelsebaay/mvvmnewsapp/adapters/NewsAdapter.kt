@@ -4,18 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentController
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.model.Article
-import com.manarelsebaay.mvvmnewsapp.ui.fragments.DetailsFragment
 import kotlinx.android.synthetic.main.news_item_view.view.*
-import okhttp3.internal.notifyAll
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
@@ -54,8 +49,8 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         holder.itemView.apply {
             Glide.with(this).load(article.urlToImage)
                 .into(Article_iv)
-            title_tv.text = article.title
-            time_tv.text = article.publishedAt
+            title_tv.text = article.title!!
+            time_tv.text = article.publishedAt!!
 
             setOnClickListener {
                 onItemClickListener?.let {

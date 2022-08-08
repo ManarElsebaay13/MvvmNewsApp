@@ -3,12 +3,15 @@ package com.manarelsebaay.mvvmnewsapp.ui.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.model.Article
 import com.manarelsebaay.mvvmnewsapp.ui.activities.MainActivity
 import com.manarelsebaay.mvvmnewsapp.ui.activities.NewsViewModel
 import kotlinx.android.synthetic.main.details_fragment.*
+
+
 
 class DetailsFragment : Fragment(R.layout.details_fragment){
 
@@ -20,7 +23,10 @@ class DetailsFragment : Fragment(R.layout.details_fragment){
        viewModel = (activity as MainActivity).viewModel
 
      ARTICLE!!.description?.let {
-        details.text= ARTICLE!!.description!!.toString()
+        title.text= ARTICLE!!.title.toString()
+         details.text= ARTICLE!!.description.toString()
+         Glide.with(this).load(ARTICLE!!.urlToImage)
+             .into(Article_iv)
      }
 
         fab.setOnClickListener {

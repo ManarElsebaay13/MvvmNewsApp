@@ -53,8 +53,7 @@ class BookMarkedFragment : Fragment (R.layout.bookmarked_fragment) {
                     }
                 }.show()
 
-            }
-        }
+            } }
 
         ItemTouchHelper(itemTouchHelperCallback).apply {
             attachToRecyclerView(bookmarked_rv)
