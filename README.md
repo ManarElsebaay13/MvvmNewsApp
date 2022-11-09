@@ -1,4 +1,3 @@
-# MvvmNewsApp
 
 <h1 align="center">
 NewsDemo
@@ -18,7 +17,7 @@ NewsDemo
 - Applying SOLID principles, each class has a single job with separation of concerns by making classes independent
   of each other and communicating with interfaces.
 
-### Tech Stack
+### Tech Stack:
 - [Kotlin](https://kotlinlang.org)
 - [Jetpack](https://developer.android.com/jetpack)
   * [Android KTX](https://developer.android.com/kotlin/ktx)
@@ -28,11 +27,12 @@ NewsDemo
   *  [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
   * [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started)
   * [Room](https://developer.android.com/training/data-storage/room)
+
 - [Coroutines - Flow](https://kotlinlang.org/docs/reference/coroutines/flow.html)
 - [Retrofit](https://square.github.io/retrofit/)
-  *[DiffUtil](https://developer.android.com/reference/androidx/recyclerview/widget/DiffUtil) to improve RecyclerView's performance when handling list updates. Even if associated with this UI component, ...
+- [DiffUtil](https://developer.android.com/reference/androidx/recyclerview/widget/DiffUtil) to improve RecyclerView's performance when handling list updates. 
 
-## Features
+## Features:
 
 + Get news (Open News Api)
 + Save news to BookMarked (Local Database)
