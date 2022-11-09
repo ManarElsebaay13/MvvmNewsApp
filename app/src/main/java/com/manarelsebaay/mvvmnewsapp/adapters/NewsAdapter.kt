@@ -39,7 +39,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
             )
         )
     }
-
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
@@ -56,7 +55,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
                 onItemClickListener?.let {
                     it(article)
                 } } }
-
     }
 
 

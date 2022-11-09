@@ -1,7 +1,6 @@
 package com.manarelsebaay.mvvmnewsapp.ui.activities
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
@@ -24,7 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         val newsRepository = NewsRepository(NewsDatabase(this))
         val viewModelProviderFactory = viewModelFactory(newsRepository)
+
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
+
 
         val navHostFragment= supportFragmentManager.findFragmentById(R.id.nav_graph_host) as NavHostFragment
         val navController= navHostFragment.navController
