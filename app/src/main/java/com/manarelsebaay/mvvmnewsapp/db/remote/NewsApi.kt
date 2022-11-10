@@ -1,6 +1,6 @@
-package com.manarelsebaay.mvvmnewsapp.api
+package com.manarelsebaay.mvvmnewsapp.db.remote
 
-import com.manarelsebaay.mvvmnewsapp.model.NewsResponse
+import com.manarelsebaay.mvvmnewsapp.db.model.NewsResponse
 import com.manarelsebaay.mvvmnewsapp.utils.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

@@ -1,7 +1,7 @@
-package com.manarelsebaay.mvvmnewsapp.db
+package com.manarelsebaay.mvvmnewsapp.db.local
 
 import androidx.room.TypeConverter
-import com.manarelsebaay.mvvmnewsapp.model.Source
+import com.manarelsebaay.mvvmnewsapp.db.model.Source
 
 
  class DBConverters {
@@ -12,7 +12,7 @@ import com.manarelsebaay.mvvmnewsapp.model.Source
     }
 
     @TypeConverter
-    fun toSource(name:String):Source{
+    fun toSource(name:String): Source {
         return Source(name,name)
     }
 

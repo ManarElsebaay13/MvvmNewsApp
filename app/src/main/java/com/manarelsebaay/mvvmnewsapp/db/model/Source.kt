@@ -1,4 +1,4 @@
-package com.manarelsebaay.mvvmnewsapp.model
+package com.manarelsebaay.mvvmnewsapp.db.model
 
 data class Source(
     val id: String,

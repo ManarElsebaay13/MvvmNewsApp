@@ -1,4 +1,4 @@
-package com.manarelsebaay.mvvmnewsapp.adapters
+package com.manarelsebaay.mvvmnewsapp.ui.adapters
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.manarelsebaay.mvvmnewsapp.R
-import com.manarelsebaay.mvvmnewsapp.model.Article
+import com.manarelsebaay.mvvmnewsapp.db.model.Article
 import kotlinx.android.synthetic.main.news_item_view.view.*
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {

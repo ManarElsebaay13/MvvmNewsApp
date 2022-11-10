@@ -1,6 +1,6 @@
 package com.manarelsebaay.mvvmnewsapp.utils
 
-import com.manarelsebaay.mvvmnewsapp.model.Article
+import com.manarelsebaay.mvvmnewsapp.db.model.Article
 
 class Constants {
 
