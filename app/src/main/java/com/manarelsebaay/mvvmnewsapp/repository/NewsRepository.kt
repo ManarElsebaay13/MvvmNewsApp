@@ -2,7 +2,7 @@ package com.manarelsebaay.mvvmnewsapp.repository
 
 import com.manarelsebaay.mvvmnewsapp.db.remote.RetrofitInstance
 import com.manarelsebaay.mvvmnewsapp.db.local.NewsDatabase
-import com.manarelsebaay.mvvmnewsapp.db.model.Article
+import com.manarelsebaay.mvvmnewsapp.model.Article
 
 class NewsRepository (
     val newsDatabase: NewsDatabase

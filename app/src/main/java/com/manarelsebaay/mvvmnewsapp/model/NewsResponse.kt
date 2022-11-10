@@ -1,7 +1,7 @@
-package com.manarelsebaay.mvvmnewsapp.db.model
+package com.manarelsebaay.mvvmnewsapp.model
 
 import androidx.lifecycle.MutableLiveData
-import com.manarelsebaay.mvvmnewsapp.db.model.Article
+import com.manarelsebaay.mvvmnewsapp.model.Article
 
 data class NewsResponse(
     val articles: MutableList<Article>,

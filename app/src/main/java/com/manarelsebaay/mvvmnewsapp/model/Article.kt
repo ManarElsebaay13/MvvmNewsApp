@@ -1,4 +1,4 @@
-package com.manarelsebaay.mvvmnewsapp.db.model
+package com.manarelsebaay.mvvmnewsapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

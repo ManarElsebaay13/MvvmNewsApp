@@ -2,7 +2,7 @@ package com.manarelsebaay.mvvmnewsapp.db.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.manarelsebaay.mvvmnewsapp.db.model.Article
+import com.manarelsebaay.mvvmnewsapp.model.Article
 import retrofit2.http.DELETE
 
 

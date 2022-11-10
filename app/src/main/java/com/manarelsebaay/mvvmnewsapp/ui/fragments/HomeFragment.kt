@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.manarelsebaay.mvvmnewsapp.ui.activities.MainActivity
 import com.manarelsebaay.mvvmnewsapp.R
 import com.manarelsebaay.mvvmnewsapp.ui.adapters.NewsAdapter
-import com.manarelsebaay.mvvmnewsapp.db.model.Article
+import com.manarelsebaay.mvvmnewsapp.model.Article
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
 import com.manarelsebaay.mvvmnewsapp.ui.activities.NewsViewModel
 import com.manarelsebaay.mvvmnewsapp.ui.fragments.DetailsFragment.Companion.ARTICLE

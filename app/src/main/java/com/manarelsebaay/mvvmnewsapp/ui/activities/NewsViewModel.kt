@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Query
-import com.manarelsebaay.mvvmnewsapp.db.model.Article
-import com.manarelsebaay.mvvmnewsapp.db.model.NewsResponse
+import com.manarelsebaay.mvvmnewsapp.model.Article
+import com.manarelsebaay.mvvmnewsapp.model.NewsResponse
 import com.manarelsebaay.mvvmnewsapp.repository.NewsRepository
 import com.manarelsebaay.mvvmnewsapp.utils.Resource
 import kotlinx.coroutines.launch
