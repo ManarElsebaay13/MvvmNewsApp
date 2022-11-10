@@ -42,7 +42,7 @@ NewsDemo
 
 # ScreenShots
 
-<img height=400 width=200 src="https://user-images.githubusercontent.com/39746086/201097947-34dbb9bc-5c88-42cf-a075-4dab22dd207f.png" hspace=24/> <img height=400 width=200 src="https://user-images.githubusercontent.com/39746086/201099281-34b580af-d857-4b96-b68f-fee3a5b6026f.png" hspace=24/> <img height=400 width=200 src="https://user-images.githubusercontent.com/39746086/201099599-d8ff93e6-b8a4-4c32-b269-51794a0b9149.png" hspace=24/> <img height=400 width=200 src="https://user-images.githubusercontent.com/39746086/201099981-e3648857-b9e6-48a1-b5c8-d5022efe54fc.png" hspace=24/> 
+<img height=400 width=180 src="https://user-images.githubusercontent.com/39746086/201097947-34dbb9bc-5c88-42cf-a075-4dab22dd207f.png" hspace=24/> <img height=400 width=180 src="https://user-images.githubusercontent.com/39746086/201099281-34b580af-d857-4b96-b68f-fee3a5b6026f.png" hspace=24/> <img height=400 width=180 src="https://user-images.githubusercontent.com/39746086/201099599-d8ff93e6-b8a4-4c32-b269-51794a0b9149.png" hspace=24/> <img height=400 width=180 src="https://user-images.githubusercontent.com/39746086/201099981-e3648857-b9e6-48a1-b5c8-d5022efe54fc.png" hspace=24/> 
 
 
 
