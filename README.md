@@ -42,8 +42,34 @@ NewsDemo
 
 # ScreenShots
 
-<img height=200 width=100 src="https://user-images.githubusercontent.com/39746086/201097947-34dbb9bc-5c88-42cf-a075-4dab22dd207f.png" hspace=24/> <img height=200 width=100 src="https://user-images.githubusercontent.com/39746086/201099281-34b580af-d857-4b96-b68f-fee3a5b6026f.png" hspace=24/> <img height=200 width=100 src="https://user-images.githubusercontent.com/39746086/201099599-d8ff93e6-b8a4-4c32-b269-51794a0b9149.png" hspace=24/> <img height=200 width=100 src="https://user-images.githubusercontent.com/39746086/201099981-e3648857-b9e6-48a1-b5c8-d5022efe54fc.png" hspace=24/> 
+<img height=300 width=150 src="https://user-images.githubusercontent.com/39746086/201097947-34dbb9bc-5c88-42cf-a075-4dab22dd207f.png" hspace=24/> <img height=300 width=150 src="https://user-images.githubusercontent.com/39746086/201099281-34b580af-d857-4b96-b68f-fee3a5b6026f.png" hspace=24/> <img height=300 width=150 src="https://user-images.githubusercontent.com/39746086/201099599-d8ff93e6-b8a4-4c32-b269-51794a0b9149.png" hspace=24/> <img height=300 width=150 src="https://user-images.githubusercontent.com/39746086/201099981-e3648857-b9e6-48a1-b5c8-d5022efe54fc.png" hspace=24/> 
 
+:warning: License:
+--------
+
+```
+MIT License
+
+Copyright (c) 2022 Manar Elsebaay
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 
 
